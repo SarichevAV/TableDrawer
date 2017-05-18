@@ -1,7 +1,11 @@
 public class Part {
-    String function;
-    int liftBoard;
-    int rightBoard;
+    private String formula;
+    private int liftBoard;
+    private int rightBoard;
 
-    Part()
+    public Part(String formula, int liftBoard, int rightBoard) {
+        this.formula = formula;
+        this.liftBoard = liftBoard;
+        this.rightBoard = rightBoard;
+    }
 }
