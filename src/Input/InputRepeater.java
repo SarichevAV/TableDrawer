@@ -3,7 +3,7 @@ package Input;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public  class InputRepeater implements Checker, UserInput {
+public class InputRepeater implements Checker {
     public String userMessage;
     Object data;
 
@@ -23,9 +23,9 @@ public  class InputRepeater implements Checker, UserInput {
         return value instanceof Integer;
     }
 
-    @Override
     public void read() throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         data = reader.read();
+        check(data);
     }
 }

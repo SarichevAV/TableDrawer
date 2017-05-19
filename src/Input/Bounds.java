@@ -1,27 +1,27 @@
 package Input;
 
-public class Bounds extends InputRepeater{
+public class Bounds extends InputRepeater implements Checker{
     private static final String message = "Введите интервал A и B: ";
-    private int leftBorder;
-    private int rightBorder;
+    private int leftBound;
+    private int rightBound;
 
     public Bounds() {
         super(message);
     }
 
-    public void setLeftBorder(int leftBorder) {
-        this.leftBorder = leftBorder;
+    public void setLeftBound(int leftBound) {
+        this.leftBound = leftBound;
     }
 
-    public void setRightBorder(int rightBorder) {
-        this.rightBorder = rightBorder;
+    public void setRightBound(int rightBound) {
+        this.rightBound = rightBound;
     }
 
-    public int getLeftBorder() {
-        return leftBorder;
+    public int getLeftBound() {
+        return leftBound;
     }
 
-    public int getRightBorder() {
-        return rightBorder;
+    public int getRightBound() {
+        return rightBound;
     }
 }

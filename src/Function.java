@@ -13,12 +13,20 @@ public class Function {
         this.parts = partCreator();
     }
 
-    List<Part> partCreator(){
-        parts.add(new Part(" ", ...,...));
-        parts.add(new Part(" ", ...,...));
-        parts.add(new Part(" ", ...,...));
-        parts.add(new Part(" ", ...,...));
-        parts.add(new Part(" ", ...,...));
+    public int getRightBoard() {
+        return rightBoard;
+    }
+
+    public int getLeftBoard() {
+        return leftBoard;
+    }//of function
+
+    private List<Part> partCreator(){
+        parts.add(new Part1(-10, -6));// TODO
+        parts.add(new Part2(-6, -2));
+        parts.add(new Part3(-2, 0));
+        parts.add(new Part4(0,2));
+        parts.add(new Part5(2,10));
         return parts;
     }
 }

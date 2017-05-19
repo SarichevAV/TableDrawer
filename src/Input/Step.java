@@ -8,9 +8,6 @@ public class Step extends InputRepeater {
         super(message);
     }
 
-    public void setStep(int step) {
-        this.step = step;
-    }
     public int getStep() {
         return step;
     }
