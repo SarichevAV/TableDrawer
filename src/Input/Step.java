@@ -1,7 +1,5 @@
 package Input;
 
-import InputUser.InputRepeater;
-
 public class Step extends InputRepeater {
     private static final String message = "Введите шаг: ";
     private int step;
