@@ -216,4 +216,7 @@ pip-log.txt
 .mr.developer.cfg
 
 #Intellij Idea files
+.idea/
+.idea/*.*
+.idea/*
 .idea
