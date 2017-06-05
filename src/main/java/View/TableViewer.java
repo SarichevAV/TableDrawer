@@ -57,7 +57,6 @@ public class TableViewer extends JFrame {
 
     public static void main(String[] args) {
         TableViewer theTableView = new TableViewer();
-
     }
 }
 
