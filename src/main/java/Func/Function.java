@@ -4,21 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Function {
-    private List<Part> parts = new ArrayList<>();
+    private List<Part> part = new ArrayList<>();
 
     public Function(List<Part> parts) {
-        this.parts = parts;
+        this.part = parts;
     }
 
     public Function() {
     }
 
-    public List<Part> getParts() {
-        return parts;
+    public List<Part> getPart() {
+        return part;
     }
 
-    public void addPart(Part part) {
-        parts.add(part);
+    public void setPart(Part newPart) {
+        part.add(newPart);
     }
-
 }
