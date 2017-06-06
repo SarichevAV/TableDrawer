@@ -20,13 +20,13 @@ public class CalcArgAndValue {
         int leftBorder = rules.getLeftBorder();
         int rightBorder = rules.getRightBorder();
         double step = rules.getStep();
-        for (double x = leftBorder ; x <= rightBorder; x+=step) {
+        for (double x = leftBorder; x <= rightBorder; x += step) {
             setArgValue(x);
         }
     }
 
     public void setArgValue(double x) {
-        for (Part part : function.getParts()) {
+        for (Part part : function.getPart()) {
             if (x >= part.getLeftBorder() && x < part.getRightBorder()) {
                 arg.add(x);
                 value.add(part.calcValue(x));

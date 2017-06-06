@@ -6,6 +6,8 @@ import Func.Part;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FunctionInput {
     public static final String PART_COUNT = "Ввведите колличество участков : ";
@@ -26,7 +28,7 @@ public class FunctionInput {
 
     public boolean checkBorder(double left, double right) {
         boolean result = true;
-        for (Part part : function.getParts()) {
+        for (Part part : function.getPart()) {
             if ((left >= part.getLeftBorder() && left < part.getRightBorder()) |
                     (right >= part.getLeftBorder() && right < part.getRightBorder())) result = false;
         }
@@ -50,7 +52,7 @@ public class FunctionInput {
         double rightBorder;
         String formula;
 
-        while (countParts >= 1 ) {
+        while (countParts >= 1) {
             System.out.print(L_BORDER);
             leftBorder = Double.parseDouble(reader.readLine());
             System.out.print(R_BORDER);
@@ -59,7 +61,7 @@ public class FunctionInput {
             formula = reader.readLine();
             System.out.println();
             if (checkBorder(leftBorder, rightBorder)) {
-                function.addPart(new Part(leftBorder, rightBorder, formula));
+                function.setPart(new Part(leftBorder, rightBorder, formula));
                 countParts--;
             } else {
                 System.out.println("Введите коректные значения границ участка");

@@ -1,4 +1,5 @@
 package TableModul;
+
 import java.util.*;
 
 
@@ -6,19 +7,9 @@ public class Table {
     private static final int INDENTATION = 2; // отступы по бокам
     private TableHeader tableHeader;
     private List<Column> columns;
-    private Basement basement;
-
     private int maxLength; // Максимальная длинна значений
     private int widthTable;
     private HashMap<Column, Integer> widthColumns;
-
-    public Table(TableHeader tableHeader, List<Column> columns, Basement basement) {
-        this.tableHeader = tableHeader;
-        this.columns = columns;
-        this.basement = basement;
-        findMaxLength();
-        calcWidhtTableAndColumns();
-    }
 
     public Table(TableHeader tableHeader, List<Column> columns) {
         this.tableHeader = tableHeader;
@@ -137,9 +128,10 @@ public class Table {
         return stringBasement;
     }
 
-    public StringBuffer createHeaderColumns() {
-        StringBuffer result = new StringBuffer("║");
-        return result;
+    public void assemblyTable() {
+        System.out.println(assemblyHeader());
+        System.out.println(assemblyColumns());
+        System.out.println(assemblyBasement());
     }
 
     public Boolean isCellFirst(Column column, Cell cell) {
@@ -155,9 +147,4 @@ public class Table {
         return columns.get(indexLastColumn) == column;
     }
 
-    public void assemblyTable() {
-        System.out.println(assemblyHeader());
-        System.out.println(assemblyColumns());
-        System.out.println(assemblyBasement());
-    }
 }
